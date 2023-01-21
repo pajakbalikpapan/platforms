@@ -24,7 +24,7 @@ export default async function middleware(req: NextRequest) {
   const path = url.pathname;
 
   // Only for demo purposes - remove this if you want to use your root domain as the landing page
-  if (hostname === "pajak365.com" || hostname === "platforms.vercel.app") {
+  if (hostname === "pajak365.com" || hostname === "pajak365.com") {
     return NextResponse.redirect("https://demo.pajak365.com");
   }
 
