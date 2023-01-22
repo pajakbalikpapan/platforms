@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="m-auto w-40">
+      <div className="m-auto w-3xl">
         <Image
           width={512}
           height={512}
