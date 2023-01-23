@@ -5,6 +5,7 @@ import BlurImage from "@/components/BlurImage";
 import BlogCard from "@/components/BlogCard";
 import Loader from "@/components/sites/Loader";
 import prisma from "@/lib/prisma";
+import Balancer from 'react-wrap-balancer'
 
 import type { GetStaticPaths, GetStaticProps } from "next";
 import type { _SiteData, Meta } from "@/types";
@@ -61,12 +62,12 @@ export default function Index({ stringifiedData }: IndexProps) {
                 )}
               </div>
               <div className="mt-10 w-5/6 mx-auto lg:w-full">
-                <h2 className="font-cal text-4xl md:text-6xl my-10">
+                <Balancer><h2 className="font-cal text-4xl md:text-6xl my-10">
                   {data.posts[0].title}
-                </h2>
-                <p className="text-base md:text-lg w-full lg:w-2/3">
+                </h2></Balancer>
+                <Balancer><p className="text-base md:text-lg w-full lg:w-2/3">
                   {data.posts[0].description}
-                </p>
+                </p></Balancer>
                 <div className="flex justify-start items-center space-x-4 w-full">
                   <div className="relative w-8 h-8 flex-none rounded-full overflow-hidden">
                     {data.user?.image ? (
@@ -140,7 +141,7 @@ export const getStaticPaths: GetStaticPaths<PathProps> = async () => {
           customDomain: null,
         },
         // you can remove this if you want to generate all sites at build time
-        customDomain: "platformize.co",
+        customDomain: "pajak365.com",
       },
       select: {
         customDomain: true,

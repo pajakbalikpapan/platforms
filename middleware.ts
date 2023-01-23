@@ -27,6 +27,10 @@ export default async function middleware(req: NextRequest) {
   // if (hostname === "pajak365.com" || hostname === "pajak365.com") {
   //   return NextResponse.redirect("https://demo.pajak365.com");
   // }
+  // if www redirect to pajak365.com
+  if (hostname === "www.pajak365.com" || hostname === "www.pajak365.com") {
+    return NextResponse.redirect("https://pajak365.com");
+  }
 
   /*  You have to replace ".pajak365.com" with your own domain if you deploy this example under your domain.
       You can also use wildcard subdomains on .vercel.app links that are associated with your Vercel team slug

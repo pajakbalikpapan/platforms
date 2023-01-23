@@ -244,7 +244,7 @@ export const getStaticProps: GetStaticProps<PostProps, PathProps> = async ({
     },
   })) as _SiteSlugData | null;
 
-  console.log(data);
+  // console.log(data);
 
   if (!data) return { notFound: true, revalidate: 10 };
 

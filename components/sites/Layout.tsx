@@ -121,9 +121,9 @@ export default function Layout({ meta, children, subdomain }: LayoutProps) {
           </button>
           <div className="text-center lg:text-left">
             <p className="font-cal text-lg sm:text-2xl text-black">
-              Platforms Starter Kit Demo
+              Pajak365 Starter Kit Demo
             </p>
-            <p
+            {/* <p
               className={`${
                 closeModal ? "lg:block hidden" : ""
               } text-sm text-gray-700 mt-2 lg:mt-0`}
@@ -139,7 +139,7 @@ export default function Layout({ meta, children, subdomain }: LayoutProps) {
                 custom domain
               </a>{" "}
               support.
-            </p>
+            </p> */}
           </div>
           <div
             className={`${
@@ -154,14 +154,14 @@ export default function Layout({ meta, children, subdomain }: LayoutProps) {
             >
               Create your publication
             </a>
-            <a
+            {/* <a
               className="flex-auto font-cal text-lg bg-black text-white border border-black rounded-md py-1 sm:py-3 px-5 hover:text-black hover:bg-white transition-all ease-in-out duration-150 whitespace-no-wrap"
               href="https://vercel.com/guides/nextjs-multi-tenant-application"
               rel="noreferrer"
               target="_blank"
             >
               Clone and deploy
-            </a>
+            </a> */}
           </div>
         </div>
       )}
