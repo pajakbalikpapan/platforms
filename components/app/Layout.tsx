@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import { signOut } from "next-auth/react";
 import Loader from "./Loader";
-import useRequireAuth from "../../lib/useRequireAuth";
+import useRequireAuth from "@/lib/useRequireAuth";
 
 import type { WithChildren } from "@/types";
 
@@ -14,9 +14,8 @@ interface LayoutProps extends WithChildren {
 }
 
 export default function Layout({ siteId, children }: LayoutProps) {
-  const title = "Platforms on Vercel";
-  const description =
-    "Create a fullstack application with multi-tenancy and custom domains support using Next.js, Prisma, and PostgreSQL";
+  const title = "Pajak365 | Diskusi Pajak pertama dan terbesar di Indonesia";
+  const description = "Diskusi Pajak pertama dan terbesar di Indonesia";
   const logo = "/favicon.ico";
   const router = useRouter();
   const sitePage = router.pathname.startsWith("/app/site/[id]");
@@ -28,6 +27,8 @@ export default function Layout({ siteId, children }: LayoutProps) {
 
   const session = useRequireAuth();
   if (!session) return <Loader />;
+
+  console.table(session)
 
   return (
     <>
@@ -52,8 +53,8 @@ export default function Layout({ siteId, children }: LayoutProps) {
           <meta property="og:type" content="website" />
 
           <meta name="twitter:card" content="summary_large_image" />
-          <meta name="twitter:site" content="@Vercel" />
-          <meta name="twitter:creator" content="@StevenTey" />
+          <meta name="twitter:site" content="@kelaspajakwithless" />
+          <meta name="twitter:creator" content="@lesssmmerize" />
           <meta name="twitter:title" content={title} />
           <meta name="twitter:description" content={description} />
           <meta name="twitter:image" content={logo} />
@@ -84,26 +85,25 @@ export default function Layout({ siteId, children }: LayoutProps) {
                 Logout
               </button>
             </div>
-            
           </div>
         </div>
         {rootPage && (
           <div className="absolute left-0 right-0 top-16 flex justify-center items-center font-cal space-x-16 border-b bg-white border-gray-200">
-            <Link
+            {/* <Link
               href="/"
               className={`border-b-2 ${
                 tab == "" ? "border-black" : "border-transparent"
               } py-3`}
             >
               My Sites
-            </Link>
+            </Link> */}
             <Link
               href="/settings"
               className={`border-b-2 ${
                 tab == "settings" ? "border-black" : "border-transparent"
               } py-3`}
             >
-              Settings
+             Profile Settings
             </Link>
           </div>
         )}
@@ -136,7 +136,7 @@ export default function Layout({ siteId, children }: LayoutProps) {
                     tab == "settings" ? "border-black" : "border-transparent"
                   } py-3`}
                 >
-                  Settings
+                  Site Settings
                 </Link>
               </div>
               <div />
@@ -174,7 +174,7 @@ export default function Layout({ siteId, children }: LayoutProps) {
                     tab == "settings" ? "border-black" : "border-transparent"
                   } py-3`}
                 >
-                  Settings
+                  Post Settings
                 </Link>
               </div>
               <div />

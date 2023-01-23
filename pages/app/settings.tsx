@@ -43,7 +43,7 @@ export default function AppSettings() {
         <Toaster
           position="top-right"
           toastOptions={{
-            duration: 10000,
+            duration: 5000,
           }}
         />
         <div className="max-w-screen-lg mx-auto px-10 sm:px-20 mt-10 mb-16">

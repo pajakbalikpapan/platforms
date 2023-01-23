@@ -76,7 +76,6 @@ export default function AppIndex() {
 
   return (
     <Layout>
-      {/* tampilkan modal untuk membuat site */}
       <Modal showModal={showModal} setShowModal={setShowModal}>
         <form
           onSubmit={(event) => {
