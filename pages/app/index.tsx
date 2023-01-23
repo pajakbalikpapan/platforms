@@ -35,7 +35,7 @@ export default function AppIndex() {
         if (available) {
           setError(null);
         } else {
-          setError(`${debouncedSubdomain}.vercel.pub`);
+          setError(`${debouncedSubdomain}.pajak365.com`);
         }
       }
     }
@@ -109,7 +109,7 @@ export default function AppIndex() {
                 type="text"
               />
               <span className="px-5 bg-gray-100 h-full flex items-center rounded-r-lg border-l border-gray-600">
-                .vercel.pub
+                .pajak365.com
               </span>
             </div>
             {error && (
@@ -195,12 +195,12 @@ export default function AppIndex() {
                       </p>
                       <a
                         className="font-cal px-3 py-1 tracking-wide rounded bg-gray-200 text-gray-600 absolute bottom-5 left-10 whitespace-nowrap"
-                        href={`https://${site.subdomain}.vercel.pub`}
+                        href={`https://${site.subdomain}.pajak365.com`}
                         onClick={(e) => e.stopPropagation()}
                         rel="noreferrer"
                         target="_blank"
                       >
-                        {site.subdomain}.vercel.pub ↗
+                        {site.subdomain}.pajak365.com ↗
                       </a>
                     </div>
                   </div>

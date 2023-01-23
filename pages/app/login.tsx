@@ -60,18 +60,18 @@ export default function Login() {
           src="/logo.png"
         />
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-          Platforms Starter Kit
+          Pajak365
         </h2>
         <p className="mt-2 text-center text-sm text-gray-600">
-          Build multi-tenant applications with custom domains. <br /> Read the{" "}
-          <a
+          Diskusi Pajak pertama dan terbesar di Indonesia
+          {/* <br /> Read the <a
             className="font-medium text-black hover:text-gray-800"
-            href="https://demo.vercel.pub/platforms-starter-kit"
+            href="https://demo.pajak365.com/platforms-starter-kit"
             rel="noreferrer"
             target="_blank"
           >
             blog post
-          </a>
+          </a> */}
         </p>
       </div>
 
