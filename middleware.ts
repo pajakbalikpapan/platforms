@@ -34,9 +34,7 @@ export default async function middleware(req: NextRequest) {
       still need to add "*.pajak365.com" as a wildcard domain on your Vercel dashboard. */
   const currentHost =
     process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
-      ? hostname
-          .replace(`.pajak365.com`, "")
-          .replace(`.pajak365.com`, "")
+      ? hostname.replace(`.pajak365.com`, "").replace(`.pajak365.com`, "")
       : hostname.replace(`.localhost:3000`, "");
 
   // rewrites for app pages
