@@ -9,6 +9,7 @@ datasource db {
 
 generator client {
   provider = "prisma-client-js"
+  output = "../node_modules/.prisma/client"
 }
 
 model User {
@@ -22,10 +23,32 @@ model User {
   image         String?
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
-  isPro  Boolean     @default(false)
+  isPro         Boolean     @default(false)
   accounts      Account[]
   sessions      Session[]
   sites         Site[]
+
+  // subscription
+  subscription  Subscription[]
+}
+
+
+// model untuk subscriptions
+model Subscription {
+  id                  String  @id @default(cuid())
+  userId              String
+  startDate           DateTime  @default(now())
+  billingCycleStart   String?  // day of the month when the billing cycle starts
+
+  // expired date just if isApproved true
+  expireDate          DateTime?
+  isApproved          Boolean     @default(false)
+
+  // connection
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+        
+
+  @@index([userId])
 }
 
 model Account {
