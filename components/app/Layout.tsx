@@ -28,8 +28,6 @@ export default function Layout({ siteId, children }: LayoutProps) {
   const session = useRequireAuth();
   if (!session) return <Loader />;
 
-  console.table(session)
-
   return (
     <>
       <div>
@@ -103,7 +101,15 @@ export default function Layout({ siteId, children }: LayoutProps) {
                 tab == "settings" ? "border-black" : "border-transparent"
               } py-3`}
             >
-             Profile Settings
+              Profile Settings
+            </Link>
+            <Link
+              href="/subscription"
+              className={`border-b-2 ${
+                tab == "settings" ? "border-black" : "border-transparent"
+              } py-3`}
+            >
+              Subscription
             </Link>
           </div>
         )}
