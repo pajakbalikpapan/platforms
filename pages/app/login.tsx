@@ -8,15 +8,13 @@ import toast, { Toaster } from "react-hot-toast";
 
 const pageTitle = "Login";
 const logo = "/favicon.ico";
-const description =
-  "Diskusi pajak pertama dan terbesar di Indonesia";
+const description = "Diskusi pajak pertama dan terbesar di Indonesia";
 
 export default function Login() {
   const [loading, setLoading] = useState(false);
 
   const [google, setGoogle] = useState(false);
   const [github, setGithub] = useState(false);
-
 
   // Get error message added by next/auth in URL.
   const { query } = useRouter();
@@ -91,11 +89,7 @@ export default function Login() {
               github ? "cursor-not-allowed bg-gray-600" : "bg-[#333]"
             } group flex justify-center items-center space-x-5 w-full sm:px-4 h-16 my-2 rounded-md focus:outline-none text-white font-cal`}
           >
-            {github ? (
-              <LoadingDots color="#fff" />
-            ) : (
-              'login with github'
-            )}
+            {github ? <LoadingDots color="#fff" /> : "login with github"}
           </button>
           <button
             disabled={google}
@@ -107,11 +101,7 @@ export default function Login() {
               google ? "cursor-not-allowed bg-gray-600" : "bg-[#4285F4]"
             } group flex justify-center items-center space-x-5 w-full sm:px-4 h-16 my-2 rounded-md focus:outline-none text-white font-cal`}
           >
-            {google ? (
-              <LoadingDots color="#fff" />
-            ) : (
-              'login with google'
-            )}
+            {google ? <LoadingDots color="#fff" /> : "login with google"}
           </button>
         </div>
       </div>
