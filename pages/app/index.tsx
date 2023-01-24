@@ -161,12 +161,16 @@ export default function AppIndex() {
       <div className="py-20 max-w-screen-xl mx-auto px-10 sm:px-20">
         <div className="flex flex-col sm:flex-row space-y-5 sm:space-y-0 justify-between items-center">
           <h1 className="font-cal text-5xl">My Sites</h1>
-          {sites ? "" :<button
-            onClick={() => setShowModal(true)}
-            className="font-cal text-lg w-3/4 sm:w-40 tracking-wide text-white bg-black border-black border-2 px-5 py-3 hover:bg-white hover:text-black transition-all ease-in-out duration-150"
-          >
-            New Site <span className="ml-2">＋</span>
-          </button>}
+          {sites ? (
+            ""
+          ) : (
+            <button
+              onClick={() => setShowModal(true)}
+              className="font-cal text-lg w-3/4 sm:w-40 tracking-wide text-white bg-black border-black border-2 px-5 py-3 hover:bg-white hover:text-black transition-all ease-in-out duration-150"
+            >
+              New Site <span className="ml-2">＋</span>
+            </button>
+          )}
         </div>
         <div className="my-10 grid gap-y-10">
           {sites ? (
