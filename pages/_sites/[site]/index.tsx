@@ -67,9 +67,9 @@ export default function Index({ stringifiedData }: IndexProps) {
                     {data.posts[0].title}
                   </h2>
                 </Balancer>
-                  <p className="text-base md:text-lg w-full lg:w-2/3">
-                    {data.posts[0].description}
-                  </p>
+                <p className="text-base md:text-lg w-full lg:w-2/3">
+                  {data.posts[0].description}
+                </p>
                 <div className="flex justify-start items-center space-x-4 w-full">
                   <div className="relative w-8 h-8 flex-none rounded-full overflow-hidden">
                     {data.user?.image ? (
